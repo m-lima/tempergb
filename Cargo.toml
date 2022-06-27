@@ -3,5 +3,9 @@ name = "tempergb"
 version = "0.1.0"
 authors = ["Marcelo Lima <marcelowind@gmail.com>"]
 edition = "2021"
+readme = "README.md"
+keywords = ["color", "temperature", "rbg"]
+description = "Convert a color temperature to RGB values"
+license = "MIT"
 
 [dependencies]
