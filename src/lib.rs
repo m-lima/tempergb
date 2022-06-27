@@ -22,9 +22,9 @@
     clippy::missing_const_for_fn
 )]
 
-/// Converts a temperature in Kelvin to a RGB triple ([`Color`](struct.Color)).
+/// Converts a color temperature to RBG [`Color`](struct.Color.html).
 ///
-/// **Note:** The input temperature should be in the [1000, 40000] range. Values outside of this
+/// **Note:** The input temperature should be in the `[1000, 40000]` range. Values outside of this
 /// range will be truncated.
 pub fn rgb_from_temperature(temperature: impl Into<f64>) -> Color {
     let temperature = {
@@ -77,8 +77,7 @@ fn into_saturated_u8(float: f64) -> u8 {
 
 /// The RGB value for a given temperature.
 ///
-/// This type as the return type for [`rgb_from_temperature`](fn.rgb_from_temperature) so that the
-/// color components are named.
+/// This type is used to name the channels returned by [`rgb_from_temperature`](fn.rgb_from_temperature.html)
 #[derive(Debug, Copy, Clone, Eq, PartialEq)]
 pub struct Color {
     r: u8,
